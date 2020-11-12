@@ -1,4 +1,4 @@
-name: Super-Linter
+name: makelint
 
 # Run this workflow every time a new commit pushed to your repository
 on: push
@@ -13,5 +13,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run linter
+      - name: npm install, build
         run: make lint
