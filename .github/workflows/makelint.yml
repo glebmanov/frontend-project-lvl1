@@ -13,5 +13,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: npm install
-        run: make lint
+      - run: 
+        make lint
