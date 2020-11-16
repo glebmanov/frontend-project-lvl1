@@ -7,7 +7,7 @@ export default async (task, game) => {
   const name = await gretting();
   console.log(task);
   for (let i = 0; i < 3; i += 1) {
-    const result = await game(name);
+    const result = await game();
     if (result === false) {
       console.log(`Let's try again, ${name}!`);
       return;
