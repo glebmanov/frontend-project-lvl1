@@ -6,3 +6,5 @@
 [asciinema even game](https://asciinema.org/a/CDFCERdA4af8VIFaTeW59pHMc)
 
 [asciinema calc game](https://asciinema.org/a/9jiMPwvFUOsUvZMxyNmp56bWz)
+
+[asciinema gcd game](https://asciinema.org/a/Fr8jm7eocyRwGYwPca2YB29qb)
