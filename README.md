@@ -8,3 +8,5 @@
 [asciinema calc game](https://asciinema.org/a/9jiMPwvFUOsUvZMxyNmp56bWz)
 
 [asciinema gcd game](https://asciinema.org/a/Fr8jm7eocyRwGYwPca2YB29qb)
+
+[asciinema progression game](https://asciinema.org/a/AkdKaKb2JyMWbm9V0pLCs35TF)
