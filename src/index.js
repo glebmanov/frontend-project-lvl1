@@ -1,8 +1,13 @@
 import gretting from './cli.js';
 
-export const getRandomInt = () => Math.floor(Math.random() * (100 - 1)) + 1;
-export const getRandomIndx = () => Math.floor(Math.random() * (3 - 0)) + 0;
-export const getIntToProg = () => Math.floor(Math.random() * (10 - 1)) + 1;
+export const check = (userAnswer, correctAnswer) => {
+  if (userAnswer === correctAnswer) {
+    console.log('Correct!');
+    return true;
+  }
+  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+  return false;
+};
 
 export default async (task, game) => {
   const name = await gretting();

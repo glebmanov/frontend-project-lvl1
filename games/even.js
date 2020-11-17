@@ -1,5 +1,5 @@
 import promptly from 'promptly';
-import { getRandomInt } from '../src/index.js';
+import { getRandomInt } from '../src/cli.js';
 
 export default async () => {
   const currentRound = getRandomInt();

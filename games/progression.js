@@ -1,5 +1,5 @@
 import promptly from 'promptly';
-import { getIntToProg } from '../src/index.js';
+import { getIntToProg } from '../src/cli.js';
 
 const getProgression = () => {
   const startProg = getIntToProg();
