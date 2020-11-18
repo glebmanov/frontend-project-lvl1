@@ -10,3 +10,5 @@
 [asciinema gcd game](https://asciinema.org/a/Fr8jm7eocyRwGYwPca2YB29qb)
 
 [asciinema progression game](https://asciinema.org/a/AkdKaKb2JyMWbm9V0pLCs35TF)
+
+[asciinema prime game](https://asciinema.org/a/wol2clODj6R3Uocjkxvk2DGAz)
