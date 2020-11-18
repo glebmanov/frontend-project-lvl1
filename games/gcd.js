@@ -1,26 +1,10 @@
-import promptly from 'promptly';
-import { getRandomInt } from '../src/cli.js';
-import { checkAnswer } from '../src/index.js';
-
-const gcd = (num1, num2) => {
-  let a = num1;
-  let b = num2;
-  while (a !== b) {
-    if (a > b) {
-      a -= b;
-    } else {
-      b -= a;
-    }
-  }
-  return a;
-};
+import { getRandomInt, gcd } from '../src/cli.js';
+import { round } from '../src/index.js';
 
 export default async () => {
   const num1 = getRandomInt();
   const num2 = getRandomInt();
   const currentRound = `${num1} ${num2}`;
-  console.log(`Question: ${currentRound}`);
-  const userAnswer = Number(await promptly.prompt('Your answer: '));
   const correctAnswer = gcd(num1, num2);
-  return checkAnswer(userAnswer, correctAnswer);
+  return round(currentRound, correctAnswer);
 };

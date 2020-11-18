@@ -1,12 +1,15 @@
+import promptly from 'promptly';
 import gretting from './cli.js';
 
-export const checkAnswer = (userAnswer, correctAnswer) => {
-  if (userAnswer === correctAnswer) {
-    console.log('Correct!');
-    return true;
+export const round = async (currentRound, correctAnswer) => {
+  console.log(`Question: ${currentRound}`);
+  const userAnswer = await promptly.prompt('Your answer: ');
+  const correctAnswerType = typeof correctAnswer === 'number' ? Number(userAnswer) : userAnswer;
+  if (correctAnswerType !== correctAnswer) {
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    return false;
   }
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-  return false;
+  return console.log('Correct!');
 };
 
 export default async (task, game) => {
