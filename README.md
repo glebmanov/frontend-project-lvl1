@@ -1,8 +1,6 @@
 ### Hexlet tests and linter status:
-![Actions Status](/workflows/hexlet-check/badge.svg)
-
+[![Actions Status](https://github.com/glebmanov/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/glebmanov/frontend-project-lvl1/actions)
 [![Test linter](https://github.com/glebmanov/frontend-project-lvl1/workflows/makelint/badge.svg)](https://github.com/glebmanov/frontend-project-lvl1/actions)
-
 [![Maintainability](https://api.codeclimate.com/v1/badges/2499e4094a66bdc6b0bd/maintainability)](https://codeclimate.com/github/glebmanov/frontend-project-lvl1/maintainability)
 
 [asciinema even game](https://asciinema.org/a/CDFCERdA4af8VIFaTeW59pHMc)
