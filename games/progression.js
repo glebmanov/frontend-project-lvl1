@@ -13,11 +13,11 @@ const getProgression = () => {
 };
 
 export default async () => {
-  const result = getProgression();
+  const progression = getProgression();
   const randomIndx = getIntForProg();
-  const correctAnswer = result[randomIndx];
-  result[randomIndx] = '..';
-  const currentRound = result.join(' ');
+  const correctAnswer = progression[randomIndx];
+  progression[randomIndx] = '..';
+  const currentRound = progression.join(' ');
   console.log(`Question: ${currentRound}`);
   const userAnswer = Number(await promptly.prompt('Your answer: '));
   return checkAnswer(userAnswer, correctAnswer);
