@@ -1,5 +1,6 @@
 import promptly from 'promptly';
 import { getRandomInt } from '../src/cli.js';
+import { checkAnswer } from '../src/index.js';
 
 const gcd = (num1, num2) => {
   let a = num1;
@@ -21,10 +22,5 @@ export default async () => {
   console.log(`Question: ${currentRound}`);
   const userAnswer = Number(await promptly.prompt('Your answer: '));
   const correctAnswer = gcd(num1, num2);
-  if (userAnswer === correctAnswer) {
-    console.log('Correct!');
-    return true;
-  }
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-  return false;
+  return checkAnswer(userAnswer, correctAnswer);
 };

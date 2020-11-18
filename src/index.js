@@ -1,6 +1,6 @@
 import gretting from './cli.js';
 
-export const check = (userAnswer, correctAnswer) => {
+export const checkAnswer = (userAnswer, correctAnswer) => {
   if (userAnswer === correctAnswer) {
     console.log('Correct!');
     return true;

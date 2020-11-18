@@ -1,9 +1,10 @@
 import promptly from 'promptly';
-import { getIntToProg } from '../src/cli.js';
+import { getIntForProg } from '../src/cli.js';
+import { checkAnswer } from '../src/index.js';
 
 const getProgression = () => {
-  const startProg = getIntToProg();
-  const stepOfProg = getIntToProg();
+  const startProg = getIntForProg();
+  const stepOfProg = getIntForProg();
   const progression = [startProg];
   for (let i = 0; progression.length < 10; i += 1) {
     progression.push(progression[i] + stepOfProg);
@@ -13,16 +14,11 @@ const getProgression = () => {
 
 export default async () => {
   const result = getProgression();
-  const randomIndx = getIntToProg();
+  const randomIndx = getIntForProg();
   const correctAnswer = result[randomIndx];
   result[randomIndx] = '..';
   const currentRound = result.join(' ');
   console.log(`Question: ${currentRound}`);
   const userAnswer = Number(await promptly.prompt('Your answer: '));
-  if (userAnswer === correctAnswer) {
-    console.log('Correct!');
-    return true;
-  }
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-  return false;
+  return checkAnswer(userAnswer, correctAnswer);
 };
