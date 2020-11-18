@@ -15,7 +15,8 @@ export const round = async (currentRound, correctAnswer) => {
 export default async (task, game) => {
   const name = await gretting();
   console.log(task);
-  for (let i = 0; i < 3; i += 1) {
+  const roundCount = 3;
+  for (let i = 0; i < roundCount; i += 1) {
     const result = await game();
     if (result === false) {
       console.log(`Let's try again, ${name}!`);
