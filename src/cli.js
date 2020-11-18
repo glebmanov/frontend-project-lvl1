@@ -35,7 +35,7 @@ export const isPrime = (num) => {
   if (num < 2) {
     return 'no';
   }
-  for (let divisor = 1; divisor <= num / 2; divisor += 1) {
+  for (let divisor = 2; divisor <= num / 2; divisor += 1) {
     if (num % divisor === 0) {
       return 'no';
     }
