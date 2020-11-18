@@ -5,11 +5,12 @@ import { checkAnswer } from '../src/index.js';
 const getProgression = () => {
   const startProg = getIntForProg();
   const stepOfProg = getIntForProg();
-  const progression = [startProg];
-  for (let i = 0; progression.length < 10; i += 1) {
-    progression.push(progression[i] + stepOfProg);
+  const result = [startProg];
+  const progressionLength = 10;
+  for (let i = 0; result.length < progressionLength; i += 1) {
+    result.push(result[i] + stepOfProg);
   }
-  return progression;
+  return result;
 };
 
 export default async () => {
