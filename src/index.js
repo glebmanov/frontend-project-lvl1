@@ -1,22 +1,11 @@
 import readlineSync from 'readline-sync';
 import gretting from './cli.js';
-import { isNumber, isString } from './utils.js';
-
-const expectedAnswerType = (userAnswer, correctAnswer) => {
-  let result;
-  if (isNumber(correctAnswer)) {
-    result = Number(userAnswer);
-  } else if (isString(correctAnswer)) {
-    result = userAnswer.toString();
-  }
-  return result;
-};
 
 export const round = (currentRound, correctAnswer) => {
   console.log(`Question: ${currentRound}`);
   const userAnswer = readlineSync.question('Your answer: ');
-  const correctUserAnswer = expectedAnswerType(userAnswer, correctAnswer);
-  if (correctUserAnswer !== correctAnswer) {
+  const expectedAnswer = correctAnswer.toString();
+  if (userAnswer !== expectedAnswer) {
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
     return false;
   }
