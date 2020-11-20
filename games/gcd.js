@@ -16,7 +16,7 @@ const getGcd = (num1, num2) => {
   return a;
 };
 
-export default async () => {
+export default () => {
   const num1 = getRandomInt(1, 99);
   const num2 = getRandomInt(1, 99);
   const currentRound = `${num1} ${num2}`;

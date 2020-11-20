@@ -18,7 +18,7 @@ const expression = (num1, num2, randomOperator) => {
   return result;
 };
 
-export default async () => {
+export default () => {
   const operators = ['+', '-', '*'];
   const randomOperator = operators[getRandomInt(0, 2)];
   const num1 = getRandomInt(1, 99);

@@ -1,4 +1,4 @@
-import promptly from 'promptly';
+import readlineSync from 'readline-sync';
 import gretting from './cli.js';
 import { isNumber, isString } from './utils.js';
 
@@ -12,9 +12,9 @@ const expectedAnswerType = (userAnswer, correctAnswer) => {
   return result;
 };
 
-export const round = async (currentRound, correctAnswer) => {
+export const round = (currentRound, correctAnswer) => {
   console.log(`Question: ${currentRound}`);
-  const userAnswer = await promptly.prompt('Your answer: ');
+  const userAnswer = readlineSync.question('Your answer: ');
   const correctUserAnswer = expectedAnswerType(userAnswer, correctAnswer);
   if (correctUserAnswer !== correctAnswer) {
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
@@ -23,12 +23,12 @@ export const round = async (currentRound, correctAnswer) => {
   return console.log('Correct!');
 };
 
-export default async (task, game) => {
-  const name = await gretting();
+export default (task, game) => {
+  const name = gretting();
   console.log(task);
   const roundCount = 3;
   for (let i = 0; i < roundCount; i += 1) {
-    const result = await game();
+    const result = game();
     if (result === false) {
       console.log(`Let's try again, ${name}!`);
       return;

@@ -3,7 +3,7 @@ import { round } from '../src/index.js';
 
 export const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-export default async () => {
+export default () => {
   const currentRound = getRandomInt(1, 99);
   const correctAnswer = isEven(currentRound) ? 'yes' : 'no';
   return round(currentRound, correctAnswer);
