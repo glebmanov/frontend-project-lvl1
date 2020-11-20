@@ -14,7 +14,7 @@ const getProgression = () => {
   return result;
 };
 
-export const prog = async () => {
+export default async () => {
   const progression = getProgression();
   const randomIndx = getRandomInt(0, 9);
   const correctAnswer = progression[randomIndx];

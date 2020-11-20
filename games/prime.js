@@ -15,7 +15,7 @@ const isPrime = (num) => {
   return 'yes';
 };
 
-export const prime = async () => {
+export default async () => {
   const currentRound = getRandomInt(1, 99);
   const correctAnswer = isPrime(currentRound);
   return round(currentRound, correctAnswer);
