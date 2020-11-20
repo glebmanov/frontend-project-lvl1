@@ -1,11 +1,22 @@
 import promptly from 'promptly';
 import gretting from './cli.js';
+import { isNumber, isString } from './utils.js';
+
+const expectedAnswerType = (userAnswer, correctAnswer) => {
+  let result;
+  if (isNumber(correctAnswer)) {
+    result = Number(userAnswer);
+  } else if (isString(correctAnswer)) {
+    result = userAnswer.toString();
+  }
+  return result;
+};
 
 export const round = async (currentRound, correctAnswer) => {
   console.log(`Question: ${currentRound}`);
   const userAnswer = await promptly.prompt('Your answer: ');
-  const correctAnswerType = typeof correctAnswer === 'number' ? Number(userAnswer) : userAnswer;
-  if (correctAnswerType !== correctAnswer) {
+  const correctUserAnswer = expectedAnswerType(userAnswer, correctAnswer);
+  if (correctUserAnswer !== correctAnswer) {
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
     return false;
   }

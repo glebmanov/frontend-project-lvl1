@@ -13,3 +13,7 @@ export const isPrime = (num) => {
   }
   return true;
 };
+
+export const isNumber = (value) => typeof value === 'number';
+
+export const isString = (value) => typeof value === 'string';
