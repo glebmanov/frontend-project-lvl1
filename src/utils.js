@@ -1,6 +1,6 @@
 export default (first, last) => Math.floor(Math.random() * (last - first + 1)) + first;
 
-export const isEven = (integer) => integer % 2 === 0;
+export const isEven = (num) => num % 2 === 0;
 
 export const isPrime = (num) => {
   if (num < 2) {
