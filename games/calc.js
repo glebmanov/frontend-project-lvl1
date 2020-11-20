@@ -12,7 +12,8 @@ const expression = (num1, num2, randomOperator) => {
       break;
     case '*': result = num1 * num2;
       break;
-    // no default
+    default:
+      throw new Error(`Unknown operator: ${randomOperator}`);
   }
   return result;
 };
