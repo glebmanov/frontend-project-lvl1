@@ -15,7 +15,7 @@ $ make install
 ### Example run games
 
 ```sh
-make brain-even
+$ make brain-even
 ```
 
 ### Games
