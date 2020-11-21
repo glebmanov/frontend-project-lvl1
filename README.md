@@ -20,12 +20,12 @@ $ make brain-even
 
 ### Games
 
-[brain-even](https://asciinema.org/a/CDFCERdA4af8VIFaTeW59pHMc)
+[brain-even](https://asciinema.org/a/374402)
 
-[brain-calc](https://asciinema.org/a/9jiMPwvFUOsUvZMxyNmp56bWz)
+[brain-calc](https://asciinema.org/a/373237)
 
-[brain-gcd](https://asciinema.org/a/Fr8jm7eocyRwGYwPca2YB29qb)
+[brain-gcd](https://asciinema.org/a/373441)
 
-[brain-progression](https://asciinema.org/a/AkdKaKb2JyMWbm9V0pLCs35TF)
+[brain-progression](https://asciinema.org/a/373472)
 
-[brain-prime](https://asciinema.org/a/wol2clODj6R3Uocjkxvk2DGAz)
+[brain-prime](https://asciinema.org/a/373644)
