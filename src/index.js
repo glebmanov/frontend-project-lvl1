@@ -17,7 +17,7 @@ export default (task, game) => {
   console.log(`Hello, ${name}!`);
   console.log(task);
   const roundsCount = 3;
-  for (let i = 0; i < roundCount; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const result = game();
     if (result === false) {
       console.log(`Let's try again, ${name}!`);

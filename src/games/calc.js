@@ -24,6 +24,6 @@ export default () => {
   const num1 = getRandomInt(1, 99);
   const num2 = getRandomInt(1, 99);
   const currentRound = `${num1} ${randomOperator} ${num2}`;
-  const correctAnswer = expression(num1, num2, randomOperator);
+  const correctAnswer =countExpression(num1, num2, randomOperator);
   return playRound(currentRound, correctAnswer);
 };
