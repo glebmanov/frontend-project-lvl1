@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export const round = (currentRound, correctAnswer) => {
+export const playRound = (currentRound, correctAnswer) => {
   console.log(`Question: ${currentRound}`);
   const userAnswer = readlineSync.question('Your answer: ');
   const expectedAnswer = correctAnswer.toString();
@@ -16,7 +16,7 @@ export default (task, game) => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log(task);
-  const roundCount = 3;
+  const roundsCount = 3;
   for (let i = 0; i < roundCount; i += 1) {
     const result = game();
     if (result === false) {
