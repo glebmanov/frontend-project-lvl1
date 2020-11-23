@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import gretting from './cli.js';
 
 export const round = (currentRound, correctAnswer) => {
   console.log(`Question: ${currentRound}`);
@@ -13,7 +12,9 @@ export const round = (currentRound, correctAnswer) => {
 };
 
 export default (task, game) => {
-  const name = gretting();
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
   console.log(task);
   const roundCount = 3;
   for (let i = 0; i < roundCount; i += 1) {
