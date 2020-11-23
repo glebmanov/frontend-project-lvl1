@@ -1,5 +1,5 @@
-import getRandomInt from '../src/utils.js';
-import { round } from '../src/index.js';
+import getRandomInt from '../utils.js';
+import { playRound } from '../index.js';
 
 export const task = 'What number is missing in the progression?';
 
@@ -20,5 +20,5 @@ export default () => {
   const correctAnswer = progression[randomIndx];
   progression[randomIndx] = '..';
   const currentRound = progression.join(' ');
-  return round(currentRound, correctAnswer);
+  return playRound(currentRound, correctAnswer);
 };

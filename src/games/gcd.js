@@ -1,5 +1,5 @@
-import getRandomInt from '../src/utils.js';
-import { round } from '../src/index.js';
+import getRandomInt from '../utils.js';
+import { playRound } from '../index.js';
 
 export const task = 'Find the greatest common divisor of given numbers.';
 
@@ -21,5 +21,5 @@ export default () => {
   const num2 = getRandomInt(1, 99);
   const currentRound = `${num1} ${num2}`;
   const correctAnswer = getGcd(num1, num2);
-  return round(currentRound, correctAnswer);
+  return playRound(currentRound, correctAnswer);
 };

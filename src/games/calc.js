@@ -1,9 +1,9 @@
-import getRandomInt from '../src/utils.js';
-import { round } from '../src/index.js';
+import getRandomInt from '../utils.js';
+import { playRound } from '../index.js';
 
 export const task = 'What is the result of the expression?';
 
-const expression = (num1, num2, randomOperator) => {
+const countExpression = (num1, num2, randomOperator) => {
   let result;
   switch (randomOperator) {
     case '+': result = num1 + num2;
@@ -25,5 +25,5 @@ export default () => {
   const num2 = getRandomInt(1, 99);
   const currentRound = `${num1} ${randomOperator} ${num2}`;
   const correctAnswer = expression(num1, num2, randomOperator);
-  return round(currentRound, correctAnswer);
+  return playRound(currentRound, correctAnswer);
 };
