@@ -11,14 +11,14 @@ export const playRound = (currentRound, correctAnswer) => {
   return console.log('Correct!');
 };
 
-export default (task, game) => {
+export default (task, playGame) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log(task);
   const roundsCount = 3;
   for (let i = 0; i < roundsCount; i += 1) {
-    const result = game();
+    const result = playGame();
     if (result === false) {
       console.log(`Let's try again, ${name}!`);
       return;

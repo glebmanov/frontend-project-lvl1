@@ -1,7 +1,7 @@
 import getRandomInt from '../utils.js';
-import { playRound } from '../index.js';
+import play, { playRound } from '../index.js';
 
-export const task = 'What number is missing in the progression?';
+const task = 'What number is missing in the progression?';
 
 const getProgression = () => {
   const startProg = getRandomInt(1, 9);
@@ -14,7 +14,7 @@ const getProgression = () => {
   return result;
 };
 
-export default () => {
+const playGame = () => {
   const progression = getProgression();
   const randomIndx = getRandomInt(0, 9);
   const correctAnswer = progression[randomIndx];
@@ -22,3 +22,5 @@ export default () => {
   const currentRound = progression.join(' ');
   return playRound(currentRound, correctAnswer);
 };
+
+export default () => play(task, playGame);
