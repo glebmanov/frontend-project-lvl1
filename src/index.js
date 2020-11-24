@@ -7,7 +7,8 @@ export const playRound = (currentRound, expectedAnswer) => {
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`);
     return false;
   }
-  return console.log('Correct!');
+  console.log('Correct!');
+  return true;
 };
 
 export default (task, playGame) => {
