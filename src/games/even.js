@@ -7,8 +7,8 @@ const isEven = (num) => num % 2 === 0;
 
 const playGame = () => {
   const currentRound = getRandomInt(1, 99);
-  const correctAnswer = isEven(currentRound) ? 'yes' : 'no';
-  return playRound(currentRound, correctAnswer);
+  const expectedAnswer = isEven(currentRound) ? 'yes' : 'no';
+  return playRound(currentRound, expectedAnswer);
 };
 
 export default () => play(task, playGame);

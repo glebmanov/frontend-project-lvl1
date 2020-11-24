@@ -1,11 +1,10 @@
 import readlineSync from 'readline-sync';
 
-export const playRound = (currentRound, correctAnswer) => {
+export const playRound = (currentRound, expectedAnswer) => {
   console.log(`Question: ${currentRound}`);
   const userAnswer = readlineSync.question('Your answer: ');
-  const expectedAnswer = correctAnswer.toString();
   if (userAnswer !== expectedAnswer) {
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`);
     return false;
   }
   return console.log('Correct!');

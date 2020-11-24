@@ -20,7 +20,8 @@ const playGame = () => {
   const correctAnswer = progression[randomIndx];
   progression[randomIndx] = '..';
   const currentRound = progression.join(' ');
-  return playRound(currentRound, correctAnswer);
+  const expectedAnswer = correctAnswer.toString();
+  return playRound(currentRound, expectedAnswer);
 };
 
 export default () => play(task, playGame);

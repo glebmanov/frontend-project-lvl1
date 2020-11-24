@@ -21,7 +21,8 @@ const playGame = () => {
   const num2 = getRandomInt(1, 99);
   const currentRound = `${num1} ${num2}`;
   const correctAnswer = getGcd(num1, num2);
-  return playRound(currentRound, correctAnswer);
+  const expectedAnswer = correctAnswer.toString();
+  return playRound(currentRound, expectedAnswer);
 };
 
 export default () => play(task, playGame);

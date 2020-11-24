@@ -17,8 +17,8 @@ const isPrime = (num) => {
 
 const playGame = () => {
   const currentRound = getRandomInt(1, 99);
-  const correctAnswer = isPrime(currentRound) ? 'yes' : 'no';
-  return playRound(currentRound, correctAnswer);
+  const expectedAnswer = isPrime(currentRound) ? 'yes' : 'no';
+  return playRound(currentRound, expectedAnswer);
 };
 
 export default () => play(task, playGame);
