@@ -1,5 +1,5 @@
 import getRandomInt from '../utils.js';
-import play, { playRound } from '../index.js';
+import play from '../index.js';
 
 const task = 'What is the result of the expression?';
 
@@ -18,7 +18,7 @@ const countExpression = (num1, num2, operator) => {
   return result;
 };
 
-const playGame = () => {
+const getGameParameters = () => {
   const operators = ['+', '-', '*'];
   const randomOperator = operators[getRandomInt(0, operators.length - 1)];
   const num1 = getRandomInt(1, 99);
@@ -26,7 +26,7 @@ const playGame = () => {
   const currentRound = `${num1} ${randomOperator} ${num2}`;
   const correctAnswer = countExpression(num1, num2, randomOperator);
   const expectedAnswer = correctAnswer.toString();
-  return playRound(currentRound, expectedAnswer);
+  return [currentRound, expectedAnswer];
 };
 
-export default () => play(task, playGame);
+export default () => play(task, getGameParameters);
