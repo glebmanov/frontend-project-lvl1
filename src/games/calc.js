@@ -3,7 +3,7 @@ import play from '../index.js';
 
 const task = 'What is the result of the expression?';
 
-const countExpression = (num1, num2, operator) => {
+const calculate = (num1, num2, operator) => {
   let result;
   switch (operator) {
     case '+': result = num1 + num2;
@@ -18,15 +18,15 @@ const countExpression = (num1, num2, operator) => {
   return result;
 };
 
-const getGameParameters = () => {
+const getGameData = () => {
   const operators = ['+', '-', '*'];
   const randomOperator = operators[getRandomInt(0, operators.length - 1)];
   const num1 = getRandomInt(1, 99);
   const num2 = getRandomInt(1, 99);
-  const currentRound = `${num1} ${randomOperator} ${num2}`;
-  const correctAnswer = countExpression(num1, num2, randomOperator);
+  const question = `${num1} ${randomOperator} ${num2}`;
+  const correctAnswer = calculate(num1, num2, randomOperator);
   const expectedAnswer = correctAnswer.toString();
-  return [currentRound, expectedAnswer];
+  return [question, expectedAnswer];
 };
 
-export default () => play(task, getGameParameters);
+export default () => play(task, getGameData);

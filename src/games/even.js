@@ -5,10 +5,10 @@ const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (num) => num % 2 === 0;
 
-const getGameParameters = () => {
-  const currentRound = getRandomInt(1, 99);
-  const expectedAnswer = isEven(currentRound) ? 'yes' : 'no';
-  return [currentRound, expectedAnswer];
+const getGameData = () => {
+  const question = getRandomInt(1, 99);
+  const expectedAnswer = isEven(question) ? 'yes' : 'no';
+  return [question, expectedAnswer];
 };
 
-export default () => play(task, getGameParameters);
+export default () => play(task, getGameData);

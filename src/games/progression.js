@@ -11,7 +11,7 @@ const getProgression = (length, start, step) => {
   return result;
 };
 
-const getGameParameters = () => {
+const getGameData = () => {
   const start = getRandomInt(1, 9);
   const step = getRandomInt(1, 9);
   const length = 10;
@@ -19,9 +19,9 @@ const getGameParameters = () => {
   const randomIndx = getRandomInt(0, progression.length - 1);
   const correctAnswer = progression[randomIndx];
   progression[randomIndx] = '..';
-  const currentRound = progression.join(' ');
+  const question = progression.join(' ');
   const expectedAnswer = correctAnswer.toString();
-  return [currentRound, expectedAnswer];
+  return [question, expectedAnswer];
 };
 
-export default () => play(task, getGameParameters);
+export default () => play(task, getGameData);

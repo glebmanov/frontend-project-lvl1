@@ -15,10 +15,10 @@ const isPrime = (num) => {
   return true;
 };
 
-const getGameParameters = () => {
-  const currentRound = getRandomInt(1, 99);
-  const expectedAnswer = isPrime(currentRound) ? 'yes' : 'no';
-  return [currentRound, expectedAnswer];
+const getGameData = () => {
+  const question = getRandomInt(1, 99);
+  const expectedAnswer = isPrime(question) ? 'yes' : 'no';
+  return [question, expectedAnswer];
 };
 
-export default () => play(task, getGameParameters);
+export default () => play(task, getGameData);

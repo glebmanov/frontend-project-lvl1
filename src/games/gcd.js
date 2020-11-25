@@ -16,13 +16,13 @@ const getGcd = (num1, num2) => {
   return a;
 };
 
-const getGameParameters = () => {
+const getGameData = () => {
   const num1 = getRandomInt(1, 99);
   const num2 = getRandomInt(1, 99);
-  const currentRound = `${num1} ${num2}`;
+  const question = `${num1} ${num2}`;
   const correctAnswer = getGcd(num1, num2);
   const expectedAnswer = correctAnswer.toString();
-  return [currentRound, expectedAnswer];
+  return [question, expectedAnswer];
 };
 
-export default () => play(task, getGameParameters);
+export default () => play(task, getGameData);
